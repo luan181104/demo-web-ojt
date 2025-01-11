@@ -1,0 +1,73 @@
+/* Pagination.module.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* Tăng khoảng cách mặc định */
+  padding: 16px; /* Giảm padding để phù hợp với màn hình nhỏ hơn */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Đảm bảo nút gói lại khi không đủ không gian */
+}
+
+.pagination button {
+  padding: 10px 16px; /* Kích thước nút mặc định */
+  font-size: 15px;
+  font-weight: 500;
+  color: #007bff;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.pagination button:active {
+  transform: translateY(0);
+}
+
+/* Responsive for tablets and small screens */
+@media screen and (max-width: 768px) {
+  .pagination {
+      gap: 10px;
+      padding: 12px; /* Giảm padding */
+  }
+
+  .pagination button {
+      padding: 8px 14px;
+      font-size: 14px;
+  }
+}
+
+/* Responsive for small screens (mobile) */
+@media screen and (max-width: 480px) {
+  .pagination {
+      gap: 8px;
+      padding: 8px;
+  }
+
+  .pagination button {
+      padding: 6px 12px; /* Kích thước nhỏ hơn cho nút */
+      font-size: 12px;
+  }
+}
+
+/* Responsive for extra-small screens (e.g., 360px and below) */
+@media screen and (max-width: 360px) {
+  .pagination {
+      gap: 6px;
+      padding: 6px;
+  }
+
+  .pagination button {
+      padding: 5px 10px; /* Nút nhỏ nhất */
+      font-size: 11px; /* Font size nhỏ hơn */
+  }
+}

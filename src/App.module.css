@@ -1,0 +1,52 @@
+/* App.module.css */
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center; /* Align logo and text vertically */
+  justify-content: flex-start; /* Align logo to the left */
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.logo {
+  height: 100px; /* Adjust the size of the logo */
+  width: auto;
+  margin-right: 20px; /* Optional: space between the logo and other elements */
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.userList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.userCard {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}

@@ -1,0 +1,82 @@
+/* Mặc định - Desktop */
+.sidebar {
+  width: 200px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+.sidebar button {
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.sidebar button:active {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.sidebar button.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+/* Tablet - max-width: 768px */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    gap: 10px; /* Đảm bảo khoảng cách giữa các nút */
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    justify-content: center;
+  }
+
+  .sidebar button {
+    flex: 1;
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+/* Mobile - max-width: 480px */
+@media screen and (max-width: 480px) {
+  .sidebar {
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    gap: 5px; /* Khoảng cách nhỏ hơn trên màn hình nhỏ */
+  }
+
+  .sidebar button {
+    font-size: 12px; /* Đảm bảo dễ đọc hơn */
+    padding: 8px;
+  }
+}
+
+/* Mobile siêu nhỏ - max-width: 360px */
+@media screen and (max-width: 360px) {
+  .sidebar button {
+    font-size: 10px; /* Font nhỏ hơn cho màn hình siêu nhỏ */
+    padding: 5px 8px; /* Giảm padding */
+  }
+}

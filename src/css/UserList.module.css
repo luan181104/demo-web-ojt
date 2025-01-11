@@ -1,0 +1,165 @@
+.userList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Default: 5 users per row */
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.userCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px; /* Adjusted for better responsiveness */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 160px; /* Default width */
+}
+
+.userCard img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  border: 2px solid #007bff;
+}
+
+.userCard p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.userCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  border-color: #007bff;
+}
+
+.filterControls {
+  display: flex;
+  flex-wrap: wrap; /* Adjust to avoid overflow on smaller screens */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.genderFilter {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.genderButton {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.genderButton:hover {
+  background-color: #eee;
+}
+
+.genderButton.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.filterInput, .countryFilter, .ageFilter input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.countryFilter:hover, .filterInput:focus, .ageFilter input:focus {
+  border-color: #007bff;
+  background-color: #eaf4ff;
+}
+
+.ageFilter input {
+  width: 50px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .userList {
+    grid-template-columns: repeat(4, 1fr); /* 4 users per row */
+  }
+
+  .userCard {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .userList {
+    grid-template-columns: repeat(3, 1fr); /* 3 users per row */
+    gap: 15px;
+  }
+
+  .userCard {
+    width: 130px;
+  }
+
+  .userCard img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .userCard p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .userList {
+    grid-template-columns: repeat(2, 1fr); /* 2 users per row */
+    gap: 10px;
+  }
+
+  .userCard {
+    width: 110px;
+    padding: 10px;
+  }
+
+  .userCard img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .userCard p {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .userList {
+    grid-template-columns: 1fr; /* 1 user per row */
+    gap: 8px;
+  }
+
+  .userCard {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .userCard img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .userCard p {
+    font-size: 9px;
+  }
+}
