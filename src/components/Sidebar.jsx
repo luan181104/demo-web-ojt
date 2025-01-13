@@ -6,11 +6,11 @@ import styles from "../css/Sidebar.module.css";
 const Sidebar = () => {
   const dispatch = useDispatch();
   const roles = ["dev", "ba", "qc", "pm"];
-  const [selectedRole, setSelectedRole] = useState(null); // Trạng thái lưu role đang chọn
+  const [selectedRole, setSelectedRole] = useState(null);
 
   const handleRoleClick = (role) => {
-    setSelectedRole(role); // Cập nhật role đang chọn
-    dispatch(fetchUsers({ page: 1, role })); // Gửi yêu cầu fetch users theo role
+    setSelectedRole(role);
+    dispatch(fetchUsers({ page: 1, role }));
   };
 
   return (
@@ -19,7 +19,7 @@ const Sidebar = () => {
         <button
           key={role}
           onClick={() => handleRoleClick(role)}
-          className={selectedRole === role ? styles.active : ""} // Thêm class active nếu được chọn
+          className={selectedRole === role ? styles.active : ""}
         >
           {role.toUpperCase()}
         </button>

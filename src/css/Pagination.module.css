@@ -1,18 +1,17 @@
-/* Pagination.module.css */
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px; /* Tăng khoảng cách mặc định */
-  padding: 16px; /* Giảm padding để phù hợp với màn hình nhỏ hơn */
+  gap: 12px;
+  padding: 16px;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap; /* Đảm bảo nút gói lại khi không đủ không gian */
+  flex-wrap: wrap;
 }
 
 .pagination button {
-  padding: 10px 16px; /* Kích thước nút mặc định */
+  padding: 10px 16px;
   font-size: 15px;
   font-weight: 500;
   color: #007bff;
@@ -33,11 +32,16 @@
   transform: translateY(0);
 }
 
-/* Responsive for tablets and small screens */
+.pagination button.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
 @media screen and (max-width: 768px) {
   .pagination {
       gap: 10px;
-      padding: 12px; /* Giảm padding */
+      padding: 12px; 
   }
 
   .pagination button {
@@ -46,7 +50,6 @@
   }
 }
 
-/* Responsive for small screens (mobile) */
 @media screen and (max-width: 480px) {
   .pagination {
       gap: 8px;
@@ -54,12 +57,11 @@
   }
 
   .pagination button {
-      padding: 6px 12px; /* Kích thước nhỏ hơn cho nút */
+      padding: 6px 12px;
       font-size: 12px;
   }
 }
 
-/* Responsive for extra-small screens (e.g., 360px and below) */
 @media screen and (max-width: 360px) {
   .pagination {
       gap: 6px;
@@ -67,7 +69,7 @@
   }
 
   .pagination button {
-      padding: 5px 10px; /* Nút nhỏ nhất */
-      font-size: 11px; /* Font size nhỏ hơn */
+      padding: 5px 10px;
+      font-size: 11px; 
   }
 }

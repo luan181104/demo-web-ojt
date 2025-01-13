@@ -7,9 +7,9 @@ const UserList = () => {
   const status = useSelector((state) => state.user.status);
 
   const [filterText, setFilterText] = useState("");
-  const [genderFilter, setGenderFilter] = useState("all"); // Lọc giới tính
-  const [countryFilter, setCountryFilter] = useState("all"); // Lọc quốc gia
-  const [ageRange, setAgeRange] = useState([0, 100]); // Lọc độ tuổi
+  const [genderFilter, setGenderFilter] = useState("all");
+  const [countryFilter, setCountryFilter] = useState("all");
+  const [ageRange, setAgeRange] = useState([0, 100]);
 
   if (status === "loading") return <p>Loading...</p>;
   if (status === "failed") return <p>Failed to fetch users.</p>;
@@ -36,8 +36,7 @@ const UserList = () => {
     <div>
       {/* Filter Controls */}
       <div className={styles.filterControls}>
-        {/* Search Filter */}
-        <label>Filter:</label>
+        <label className={styles.label}>Filter:</label>
         <input
           type="text"
           placeholder="Search by name"
